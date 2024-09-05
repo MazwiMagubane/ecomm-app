@@ -1,0 +1,32 @@
+{% extends 'shop/base.html' %}
+
+{% block body %}
+<head>
+    <title>AnalytiXpress | Details</title>
+</head>
+
+<div class="container">
+    <div class="row d-flex justify-content-between">
+        <div class="col-auto mx-auto">
+            <div class="card">
+                <img src="{{ product_object.image }}">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="card-title">
+                            {{ product_object.title }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        {{ product_object.description }}
+                    </div>
+                    <div class="row">
+                        <div class="card-text">
+                            ZAR {{ product_object.price }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
