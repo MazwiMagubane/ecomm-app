@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,12 +21,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-j(qk+zy#=61w(2wu7k4$qi)ez0q(uk^ko#lv)u_8@nh5162y%4'
+try:
+    SECRET_KEY = os.environ[".ANALYTIXPRESS_DJANGO_SECRET_KEY"]
+except KeyError as e:
+    raise RuntimeError("Could not find a .ANALYTIXPRESS_DJANGO_SECRET_KEY in environment") from e
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["analytixpress.com", "www.analytixpress.com"]
+ALLOWED_HOSTS = [".analytixpress.com"]
 
 
 # Application definition
