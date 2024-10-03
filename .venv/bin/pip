@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/mazwi/Library/Mobile Documents/com~apple~CloudDocs/Software Engineering & DevOps/ecomm-app/.venv/bin/python3" "$0" "$@"
+'''exec' "/Users/mazwi/Library/Mobile Documents/com~apple~CloudDocs/Software Engineering & DevOps/ecomm-app/.venv/bin/python3.12" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
