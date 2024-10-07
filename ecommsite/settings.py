@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-# MIDDLEWARE += ["csp.middleware.CSPMiddleware"]
+MIDDLEWARE += ["csp.middleware.CSPMiddleware"]
 
 ROOT_URLCONF = 'ecommsite.urls'
 
