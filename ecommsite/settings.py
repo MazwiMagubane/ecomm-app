@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'shop',
+    'csp',
 ]
+INSTALLED_APPS += ['csp']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -53,7 +55,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-# MIDDLEWARE += ["csp.middleware.CSPMiddleware"]
+MIDDLEWARE += ["csp.middleware.CSPMiddleware"]
 
 ROOT_URLCONF = 'ecommsite.urls'
 
@@ -131,13 +133,13 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# SECURE_HSTS_SECONDS = 31536000
-# SECURE_HSTS_PRELOAD = True
-# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-# SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+SECURE_HSTS_SECONDS = 31536000
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
-# SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
+SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
 
-# CSP_STYLE_SRC = ["'self'", "cdn.jsdelivr.net", "code.jquery.com"]
+CSP_STYLE_SRC = ["'self'", "cdn.jsdelivr.net", "code.jquery.com"]
 
-# CSP_SCRIPT_SRC = ["'self'", "code.jquery.com"]
+CSP_SCRIPT_SRC = ["'self'", "code.jquery.com"]
