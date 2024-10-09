@@ -136,8 +136,8 @@ SECURE_HSTS_PRELOAD = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
-SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
+# SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
 
-CSP_STYLE_SRC = ["'self'", "cdn.jsdelivr.net", "code.jquery.com"]
+# CSP_STYLE_SRC = ["'self'", "cdn.jsdelivr.net", "code.jquery.com"]
 
-CSP_SCRIPT_SRC = ["'self'", "code.jquery.com"]
+# CSP_SCRIPT_SRC = ["'self'", "code.jquery.com"]
