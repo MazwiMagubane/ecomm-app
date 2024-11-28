@@ -35,9 +35,9 @@ def checkout(request):
         city = request.POST.get('inputCity','')
         province = request.POST.get('inputProvince','')
         postcode = request.POST.get('inputPostcode','')
-        print(firstname, lastname, email, address, address2, city, province, postcode)
+        total = request.POST.get('total','')
 
-        order = Order(items=items, firstname=firstname, lastname=lastname, email=email, address=address, address2=address2, city=city, province=province, postcode=postcode)
+        order = Order(items=items, firstname=firstname, lastname=lastname, email=email, address=address, address2=address2, city=city, province=province, postcode=postcode, total=total)
         order.save()
 
     return render(request, 'shop/checkout.html')

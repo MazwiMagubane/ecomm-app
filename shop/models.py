@@ -12,7 +12,7 @@ class Products(models.Model):
     discount_price = models.FloatField()
     category = models.CharField(max_length=200)
     description = models.TextField()
-    image = models.CharField(max_length=300)
+    image = models.CharField(max_length=10000)
 
 class Order(models.Model):
     items = models.CharField(max_length=1000)
@@ -24,3 +24,4 @@ class Order(models.Model):
     city = models.CharField(max_length=200)
     province = models.CharField(max_length=200)
     postcode = models.CharField(max_length=200)
+    total = models.CharField(max_length=200)
