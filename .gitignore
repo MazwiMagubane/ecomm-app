@@ -1,1 +1,33 @@
+# Django secret keys / settings overrides
+*.env
+.env.*
+secrets.json
+
+# SQLite database files
+*.sqlite3
+
+# Compiled Python files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# User/IDE-specific files
+*.log
+*.pot
+*.pyc
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+*.coverage
+*.DS_Store
+*.idea/
+.vscode/
+*.swp
+
+# Node modules (if using JS tooling)
+node_modules/
+
+# Virtual environments
 .venv/
+env/
